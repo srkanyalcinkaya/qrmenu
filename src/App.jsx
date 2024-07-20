@@ -1,6 +1,62 @@
+import { useState } from "react";
 import { menu_items } from "./utils";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
+import { Button } from "@/components/ui/button"
 
 export default function App() {
+  const [tabs, setTabs] = useState("mesrubat")
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems(prevCartItems => {
+      const existingItemIndex = prevCartItems.findIndex(item => item.product.id === product.id);
+      if (existingItemIndex >= 0) {
+        const updatedCartItems = [...prevCartItems];
+        updatedCartItems[existingItemIndex].quantity += 1;
+        return updatedCartItems;
+      } else {
+        return [...prevCartItems, { product, quantity: 1 }]; // Miktar 1 olarak başlıyor
+      }
+    });
+  };
+
+  const increaseQuantity = (product) => {
+    setCartItems(prevCartItems =>
+      prevCartItems.map(item =>
+        item.product.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  const decreaseQuantity = (product) => {
+    setCartItems(prevCartItems => {
+      const updatedCartItems = prevCartItems
+        .map(item =>
+          item.product.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter(item => item.quantity > 0);
+      return updatedCartItems;
+    });
+  };
+
+  const placeOrder = () => {
+    const orderDetails = cartItems.map(item => `${item.product.name} - ${item.quantity} adet`).join('\n');
+    const whatsappMessage = `Sipariş Detayları:
+------------------
+${orderDetails} 
+------------------
+Total:${cartItems.reduce((sum, item) => sum + item.product.price * item.quantity, 0).toFixed(2)} ₺
+------------------
+Oda NO:`;
+    const phoneNumber = '+905331625539';
+    window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`);
+    console.log(whatsappMessage)
+  };
   return (
     <>
       <header>
@@ -9,12 +65,14 @@ export default function App() {
             <span className="mr-4 block cursor-pointer py-1.5 font-bold text-lg    leading-relaxed text-black antialiased">
               Arabacılar Pansiyon
             </span>
+            <h2 className="text-black">Total: {cartItems.reduce((sum, item) => sum + item.product.price * item.quantity, 0).toFixed(2)} ₺</h2>
+            <button className="text-black" onClick={placeOrder}>Sipariş Ver</button>
           </div>
         </nav>
 
       </header>
-      <main className="block w-full max-w-screen-xl px-4 py-2 mx-auto text-black mt-10 bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4 ">
-        <section>
+      <main className="block w-full max-w-screen-xl px-4 py-2 mx-auto text-black mt-10  lg:px-8 lg:py-4 ">
+        {/* <section>
           <h2 className="text-2xl font-semibold my-4">
             Arabacılar Pansiyon Menü
           </h2>
@@ -55,9 +113,110 @@ export default function App() {
               </div>
             </div>
           ))}
+        </section> */}
+
+        <div>
+          <div className="grid grid-cols-3  gap-5">
+            {
+              menu_items.map((item, index) => (
+                <button key={index} onClick={() => setTabs(item.category)} className={`${item.category === tabs ? "text-white  bg-[#0F172A]" : "bg-white text-[#0F172A]"}    md:p-4 p-2 rounded  shadow-md flex items-center justify-center text-sm md:text-base`}>
+                  {item.category_name}
+                </button>
+              ))
+            }
+          </div>
+          <div className="  mt-6">
+            {
+              menu_items.filter(e=> e.category === tabs).map((item, index) => (
+                <div key={index} className="flex items-center justify-center  gap-6 flex-wrap h-full">
+
+                  {item.items.map((product, index) => {
+                    const cartItem = cartItems.find(item => item.product.id === product.id);
+                    return (
+                      <div className="min-w-[150px] md:min-w-[120px] h-[240px] text-black rounded-lg   flex flex-col items-center justify-center relative text-start" key={index}>
+                        <div className="flex flex-col items-center text-start ">
+                          <img src={product.img} alt={product.name} className="w-[100px] border-[#3F5969]/20 border-[1px] p-1 rounded-xl flex items-center justify-center" />
+                          <span className="font-semibold text-lg text-[#3F5969]">
+                            {product.price} ₺
+                          </span>
+                          <span className="font-light  text-base text-slate-900  mb-3">
+                            {product.name}
+                          </span>
+                          {cartItem ?
+                            <div className="flex items-center w-ful justify-between ">
+                              <Button onClick={() => decreaseQuantity(product)} >-</Button>
+                              <div className="bg-gray-100 shadow-md  w-16   h-full rounded-md flex items-center justify-center text-xl font-medium ">
+                                {cartItem.quantity}
+                              </div>
+                              <Button onClick={() => increaseQuantity(product)} >+</Button>
+                            </div>
+                            :
+                            <Button onClick={() => addToCart(product)} >Sepete Ekle</Button>
+                          }
+
+                        </div>
+
+                      </div>
+                    )
+                  })}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <section>
+          {/* <Tabs defaultValue="account" className="w-full h-full">
+            <TabsList className=" flex mb-10 ">
+              {
+                menu_items.map((item, index) => (
+                  <TabsTrigger value={item.category} key={index}>{
+                    item.category_name
+                  }</TabsTrigger>
+                ))
+              }
+
+            </TabsList>
+            {
+              menu_items.map((item, index) => (
+                <TabsContent value={item.category} key={index} className="flex items-center justify-start  gap-6 flex-wrap h-full">
+
+                  {item.items.map((product, index) => {
+                    const cartItem = cartItems.find(item => item.product.id === product.id);
+                    return (
+                      <div className="min-w-[180px] h-[240px]    text-black rounded-lg p-4 flex flex-col items-center justify-center relative text-start" key={index}>
+                        <div className="flex flex-col items-center text-start ">
+                          <img src={product.img} alt={product.name} className="w-[120px] border-[#3F5969]/20 border-[1px] p-1 rounded-xl flex items-center justify-center" />
+                          <span className="font-semibold text-lg text-[#3F5969]">
+                            {product.price} ₺
+                          </span>
+                          <span className="font-light  text-base text-slate-900  mb-3">
+                            {product.name}
+                          </span>
+                          {cartItem ?
+                            <div className="flex items-center w-ful justify-between ">
+                              <Button onClick={() => decreaseQuantity(product)} >-</Button>
+                              <div className="bg-gray-100 shadow-md  w-20   h-full rounded-md flex items-center justify-center text-xl font-medium ">
+                                {cartItem.quantity}
+                              </div>
+                              <Button onClick={() => increaseQuantity(product)} >+</Button>
+                            </div>
+                            :
+                            <Button onClick={() => addToCart(product)} >Sepete Ekle</Button>
+                          }
+
+                        </div>
+
+                      </div>
+                    )
+                  })}
+                </TabsContent>
+              ))
+            }
+          </Tabs> */}
         </section>
       </main>
-      <footer className="block w-full max-w-screen-xl px-4 py-4 mx-auto text-black mt-10 bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4 mb-4 ">
+      {/* <footer className="block w-full max-w-screen-xl px-4 py-4 mx-auto text-black mt-10 bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4 mb-4 ">
         Sipariş için Whatsapp
         <div className="flex items-center mt-4">
           <svg xmlns="http://www.w3.org/2000/svg" width={39} height={39} viewBox="0 0 39 39">
@@ -71,7 +230,7 @@ export default function App() {
           </a>
 
         </div>
-      </footer>
+      </footer> */}
     </>
   )
 }
