@@ -32,19 +32,19 @@ export const menu_items = [
             },
             {
                 id: 5,
-                name: "Lipton Şeftalili",
+                name: "Ice Tea Şeftalili",
                 price: 40,
                 img: liptonseftali
             },
             {
                 id: 6,
-                name: "Frutti Limonlu",
+                name: "Limonlu Soda",
                 price: 25,
                 img: fruttilimon
             },
             {
                 id: 7,
-                name: "Frutti Elmalı",
+                name: "Elmalı Soda",
                 price: 25,
                 img: fruttielma
             },

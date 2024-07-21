@@ -16,7 +16,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-
+import logo from "@/assets/images/logo.png"
 export default function App() {
   const isDesktop = useMediaQuery("only screen and (max-width : 768px)");
   const [open, setOpen] = useState(false)
@@ -72,17 +72,20 @@ Oda NO:`;
 
   return (
     <>
-      <header>
-        <nav className="block w-full max-w-screen-xl px-4 py-2 mx-auto text-white bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
+      <header className="fixed top-0 inset-0  z-10 h-20 pt-1">
+        <nav className="block w-full max-w-screen-xl  py-2 mx-auto text-white bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
           <div className="container flex items-center justify-between mx-auto ">
-            <span className="mr-4 block cursor-pointer py-1.5 font-bold text-lg  leading-relaxed text-black antialiased">
-              Arabacılar Pansiyon
-            </span>
+            <div className="flex items-center gap-2 ml-1">
+              <img src={logo} className="w-12" />
+              <span className="block cursor-pointer py-1.5 font-bold md:text-lg  leading-relaxed text-black antialiased">
+                Arabacılar Pansiyon
+              </span>
+            </div>
             <Button onClick={() => setOpen(true)} className="relative">
               Sepet
               {
                 cartItems.length > 0 &&
-                <div className="absolute -top-1 -right-1 bg-blue-400 h-4 w-4 rounded-full text-xs flex items-center justify-center text-center">
+                <div className="absolute -top-2 -right-2 bg-blue-400 h-5 w-5 rounded-full text-xs flex items-center justify-center text-center">
                   {cartItems.length}
                 </div>
 
@@ -92,7 +95,7 @@ Oda NO:`;
         </nav>
 
       </header>
-      <main className="block w-full max-w-screen-xl px-4 py-2 mx-auto text-black mt-10  lg:px-8 lg:py-4 ">
+      <main className="block w-full max-w-screen-xl px-4 py-2 mx-auto text-black mt-24   lg:px-8 lg:py-4">
 
 
         <div>
@@ -105,7 +108,7 @@ Oda NO:`;
               ))
             }
           </div>
-          <div className="  mt-6">
+          <div className="mt-6">
             {
               menu_items.filter(e => e.category === tabs).map((item, index) => (
                 <div key={index} className="flex items-center justify-center  gap-6 flex-wrap h-full">
