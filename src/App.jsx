@@ -116,15 +116,17 @@ Oda NO:`;
                   {item.items.map((product, index) => {
                     const cartItem = cartItems.find(item => item.product.id === product.id);
                     return (
-                      <div className="max-w-[150px] md:min-w-[120px] w-full h-[240px] text-black rounded-lg   flex flex-col items-center justify-center relative text-start" key={index}>
-                        <div className="flex flex-col items-center text-center ">
-                          <img src={product.img} alt={product.name} className="w-[100px] border-[#3F5969]/20 border-[1px] p-1 rounded-xl flex items-center justify-center" />
-                          <span className="font-semibold text-lg text-[#3F5969]">
-                            {product.price} ₺
-                          </span>
-                          <span className="font-light  text-base text-slate-900  mb-3 text-balance   ">
-                            {product.name}
-                          </span>
+                      <div className="max-w-[150px] md:min-w-[120px] w-full h-[220px] text-black rounded-lg   flex flex-col items-center justify-center relative text-start" key={index}>
+                        <div className="flex flex-col items-center text-center justify-between h-full  ">
+                          <div className="flex flex-col items-center text-center">
+                            <img src={product.img} alt={product.name} className="w-[100px] border-[#3F5969]/20 border-[1px] p-1 rounded-xl flex items-center justify-center" />
+                            <span className="font-semibold text-lg text-[#3F5969]">
+                              {product.price} ₺
+                            </span>
+                            <span className="font-light  text-sm text-slate-900  mb-3 text-balance   ">
+                              {product.name}
+                            </span>
+                          </div>
                           {cartItem ?
                             <div className="flex items-center w-ful justify-between ">
                               <Button onClick={() => decreaseQuantity(product)} >-</Button>
