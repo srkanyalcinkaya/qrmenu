@@ -1,4 +1,5 @@
-import redbull from "@/assets/images/redbull.png"
+import { browni, burcaktuzlu, cerazakokteyl, cerazapopcorn, cocacola, doritoshotcorn, doritosnacho, doritostaco, eticikolata, etisusamli, fanta, fruttielma, fruttilimon, graxbaharatli, graxpeynirli, hosbes, lays1, lays2, liptonseftali, nescafexpress, nigdegazoz, petito, pınarsu, pınarsu15l, redbull, rufflesorginal, rufflespeynirlisogan, sarıkızsoda, topkek, tutku } from "@/assets/images";
+
 
 export const menu_items = [
     {
@@ -13,57 +14,63 @@ export const menu_items = [
             },
             {
                 id: 2,
-                name: "Soğuk Kahve",
+                name: "Nescafe XPRESS",
                 price: 50,
-                img: redbull
+                img: nescafexpress
             },
             {
                 id: 3,
                 name: "Coca Cola",
                 price: 40,
-                img: redbull
+                img: cocacola
             },
             {
                 id: 4,
                 name: "Fanta",
                 price: 40,
-                img: redbull
+                img: fanta
             },
             {
                 id: 5,
-                name: "Ice Tea",
+                name: "Lipton Şeftalili",
                 price: 40,
-                img: redbull
+                img: liptonseftali
             },
             {
                 id: 6,
-                name: "Meyveli Soda",
+                name: "Frutti Limonlu",
                 price: 25,
-                img: redbull
+                img: fruttilimon
             },
             {
                 id: 7,
-                name: "Niğde Gazozu",
+                name: "Frutti Elmalı",
                 price: 25,
-                img: redbull
+                img: fruttielma
             },
             {
                 id: 8,
-                name: "Sade Soda",
-                price: 20,
-                img: redbull
+                name: "Niğde Gazozu",
+                price: 25,
+                img: nigdegazoz
             },
             {
                 id: 9,
-                name: "1,5 L Su",
+                name: "Sarıkız Soda",
                 price: 20,
-                img: redbull
+                img: sarıkızsoda
             },
             {
                 id: 10,
+                name: "Pınar 1,5 L Su",
+                price: 20,
+                img: pınarsu15l
+            },
+            {
+                id: 11,
                 name: "0,5 L Su",
                 price: 10,
-                img: redbull
+                img: pınarsu
             },
         ]
     },
@@ -72,10 +79,58 @@ export const menu_items = [
         category: "cips",
         items: [
             {
-                id: 11,
-                name: "Tüm Cips Çeşitleri",
+                id: 12,
+                name: "Doritos Taco",
                 price: 50,
-                img: redbull
+                img: doritostaco
+            },
+            {
+                id: 13,
+                name: "Doritos Hot Corn",
+                price: 50,
+                img: doritoshotcorn
+            },
+            {
+                id: 14,
+                name: "Doritos Nacho",
+                price: 50,
+                img: doritosnacho
+            },
+            {
+                id: 15,
+                name: "Lays",
+                price: 50,
+                img: lays1
+            },
+            {
+                id: 16,
+                name: "Lays",
+                price: 50,
+                img: lays2
+            },
+            {
+                id: 17,
+                name: "Ceraza Kokteyl",
+                price: 50,
+                img: cerazakokteyl
+            },
+            {
+                id: 18,
+                name: "Ceraza Popcorn",
+                price: 50,
+                img: cerazapopcorn
+            },
+            {
+                id: 19,
+                name: "Ruffles Originals",
+                price: 50,
+                img: rufflesorginal
+            },
+            {
+                id: 20,
+                name: "Ruffles Peynir & Soğanlı",
+                price: 50,
+                img: rufflespeynirlisogan
             },
         ]
     },
@@ -84,52 +139,64 @@ export const menu_items = [
         category: "atistirmalik",
         items: [
             {
-                id: 12,
+                id: 21,
                 name: "Tutku Bisküvi",
                 price: 20,
-                img: redbull
+                img: tutku
             },
             {
-                id: 13,
+                id: 22,
                 name: "Hoşbeş Gofret",
                 price: 15,
-                img: redbull
+                img: hosbes
             },
             {
-                id: 14,
-                name: "Grax Çubuk Kraker",
+                id: 23,
+                name: "Grax Baharatlı Çubuk Kraker",
                 price: 15,
-                img: redbull
+                img: graxbaharatli
             },
             {
-                id: 15,
-                name: "Susamlı Çubuk Kraker",
+                id: 24,
+                name: "Grax Peynirli Çubuk Kraker",
                 price: 15,
-                img: redbull
+                img: graxpeynirli
             },
             {
-                id: 16,
+                id: 25,
+                name: "Eti Susamlı Çubuk Kraker",
+                price: 15,
+                img: etisusamli
+            },
+            {
+                id: 26,
                 name: "Brown Intense",
                 price: 20,
-                img: redbull
+                img: browni
             },
             {
-                id: 17,
+                id: 27,
                 name: "Çikolata Keyfi Antepli",
                 price: 40,
-                img: redbull
+                img: eticikolata
             },
             {
-                id: 18,
+                id: 28,
                 name: "Petito Çekmece Çiko",
                 price: 40,
-                img: redbull
+                img: petito
             },
             {
-                id: 19,
-                name: "Pop Kek",
+                id: 29,
+                name: "Top Kek",
                 price: 10,
-                img: redbull
+                img: topkek
+            },
+            {
+                id: 29,
+                name: "Burcak Tuzlu Bisküvi ",
+                price: 10,
+                img: burcaktuzlu
             },
         ]
     },
