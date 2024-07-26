@@ -1,4 +1,4 @@
-import { browni, burcaktuzlu, cerazakokteyl, cerazapopcorn, cocacola, doritoshotcorn, doritosnacho, doritostaco, eticikolata, etisusamli, fanta, fruttielma, fruttilimon, graxbaharatli, graxpeynirli, hosbes, lays1, lays2, liptonseftali, nescafexpress, nigdegazoz, petito, pınarsu, pınarsu15l, redbull, rufflesorginal, rufflespeynirlisogan, sarıkızsoda, topkek, tutku } from "@/assets/images";
+import { acilifistik, antepfistik, badem, beyazleblebi, browni, burcaktuzlu, cerazakokteyl, cerazapopcorn, cocacola, doritoshotcorn, doritosnacho, doritostaco, eticikolata, etisusamli, fanta, findik, fruttielma, fruttilimon, graxbaharatli, graxpeynirli, hosbes, kaju, karisik, lays1, lays2, liptonseftali, nescafexpress, nigdegazoz, petito, pınarsu, pınarsu15l, redbull, rufflesorginal, rufflespeynirlisogan, sarileblebi, sarıkızsoda, topkek, tutku, yerfistigi, yerfistigi2 } from "@/assets/images";
 
 
 export const menu_items = [
@@ -193,10 +193,76 @@ export const menu_items = [
                 img: topkek
             },
             {
-                id: 29,
+                id: 30,
                 name: "Burcak Tuzlu Bisküvi ",
                 price: 10,
                 img: burcaktuzlu
+            },
+        ]
+    },
+    {
+        category_name: "Çerezler",
+        category: "cerezler",
+        items: [
+            {
+                id: 31,
+                name: "Tadım Antep Fıstıgı",
+                price: 100,
+                img: antepfistik
+            },
+            {
+                id: 32,
+                name: "Tadım Fındık",
+                price: 75,
+                img: findik
+            },
+            {
+                id: 33,
+                name: "Tadım Kaju Fıstıgı",
+                price: 55,
+                img: kaju
+            },
+            {
+                id: 34,
+                name: "Tadım Karışık",
+                price: 60,
+                img: karisik
+            },
+            {
+                id: 35,
+                name: "Tadım Badem",
+                price: 65,
+                img: badem
+            },
+            {
+                id: 36,
+                name: "Tadım Sarı Leblebi Tuzlu",
+                price: 30,
+                img: sarileblebi
+            },
+            {
+                id: 37,
+                name: "Tadım Kavrulmuş Tuzlu Yer Fıstıgı",
+                price: 35,
+                img: yerfistigi
+            },
+            {
+                id: 38,
+                name: "Tadım İşlenmiş Yer Fıstıgı",
+                price: 35,
+                img: yerfistigi2
+            },
+            {
+                id: 39,
+                name: "Tadım Beyaz Leblebi",
+                price: 30,
+                img: beyazleblebi
+            },
+            {
+                id: 40,
+                name: "Tadım Acı Bahratlı Yer Fıstıgı",
+                price: 30,
+                img: acilifistik
             },
         ]
     },
