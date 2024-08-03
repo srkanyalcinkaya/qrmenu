@@ -195,7 +195,7 @@ export const menu_items = [
             {
                 id: 30,
                 name: "Burcak Tuzlu Bisküvi ",
-                price: 10,
+                price: 20,
                 img: burcaktuzlu
             },
             {
