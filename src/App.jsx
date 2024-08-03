@@ -6,6 +6,7 @@ import Footer from "./components/shared/footer";
 import Categories from "./components/shared/categories";
 import Menu from "./components/shared/menu";
 import Modal from "./components/shared/modal";
+import BackToTop from "./components/shared/back-to-top";
 
 export default function App() {
   const isDesktop = useMediaQuery("only screen and (max-width : 768px)");
@@ -91,6 +92,7 @@ Oda NO:`;
         />
       </main>
       <Footer />
+      <BackToTop />
     </>
   )
 }

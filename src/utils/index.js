@@ -1,4 +1,4 @@
-import { acilifistik, antepfistik, badem, beyazleblebi, browni, burcaktuzlu, cerazakokteyl, cerazapopcorn, cocacola, doritoshotcorn, doritosnacho, doritostaco, eticikolata, etisusamli, fanta, findik, fruttielma, fruttilimon, graxbaharatli, graxpeynirli, hosbes, kaju, karisik, lays1, lays2, liptonseftali, nescafexpress, nigdegazoz, petito, pınarsu, pınarsu15l, redbull, rufflesorginal, rufflespeynirlisogan, sarileblebi, sarıkızsoda, topkek, tutku, yerfistigi, yerfistigi2 } from "@/assets/images";
+import { acilifistik, antepfistik, badem, beyazleblebi, browni, burcaktuzlu, cerazakokteyl, cerazapopcorn, cocacola, cubukkraker, doritoshotcorn, doritosnacho, doritostaco, eticikolata, etisusamli, fanta, findik, fruttielma, fruttilimon, graxbaharatli, graxpeynirli, hosbes, hosbescikolatali, hosbescilek, kaju, karisik, lays1, lays2, liptonseftali, nero, nescafexpress, nigdegazoz, petito, popkekcikolatali, popkekmuzlu, pınarsu, pınarsu15l, redbull, rufflesorginal, rufflespeynirlisogan, sarileblebi, sarıkızsoda, topkek, tutku, yerfistigi, yerfistigi2 } from "@/assets/images";
 
 
 export const menu_items = [
@@ -198,6 +198,43 @@ export const menu_items = [
                 price: 10,
                 img: burcaktuzlu
             },
+            {
+                id: 31,
+                name: "Nero Bisküvi ",
+                price: 20,
+                img: nero
+            },
+            {
+                id: 32,
+                name: "Hoşbeş Çikolatalı Gofret ",
+                price: 15,
+                img: hosbescikolatali
+            },
+            {
+                id: 33,
+                name: "Hoşbeş Çilekli Gofret",
+                price: 15,
+                img: hosbescilek
+            },
+            {
+                id: 34,
+                name: "Çubuk Kraker",
+                price: 10,
+                img: cubukkraker
+            },
+            {
+                id: 35,
+                name: "Popkek Çikolatalı",
+                price: 15,
+                img: popkekcikolatali
+            },
+            {
+                id: 36,
+                name: "Popkek Muzlu",
+                price: 15,
+                img: popkekmuzlu
+            },
+
         ]
     },
     {
