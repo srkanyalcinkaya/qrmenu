@@ -1,4 +1,4 @@
-import { acilifistik, antepfistik, badem, beyazleblebi, browni, burcaktuzlu, cerazakokteyl, cerazapopcorn, cocacola, cubukkraker, doritoshotcorn, doritosnacho, doritostaco, eticikolata, etisusamli, fanta, findik, fruttielma, fruttilimon, graxbaharatli, graxpeynirli, hosbes, hosbescikolatali, hosbescilek, kaju, karisik, lays1, lays2, liptonseftali, nero, nescafexpress, nigdegazoz, petito, popkekcikolatali, popkekmuzlu, pınarsu, pınarsu15l, redbull, rufflesorginal, rufflespeynirlisogan, sarileblebi, sarıkızsoda, topkek, tutku, yerfistigi, yerfistigi2 } from "@/assets/images";
+import { acilifistik, antepfistik, badem, beyazleblebi, browni, burcaktuzlu, cerazakokteyl, cerazapopcorn, cocacola, cubukkraker, doritoshotcorn, doritosnacho, doritostaco, eticikolata, etisusamli, fanta, findik, fruttielma, fruttilimon, graxbaharatli, graxpeynirli, hosbes, hosbescikolatali, hosbescilek, kaju, karisik, lays1, lays2, liptonseftali, mandalinasoda, nero, nescafexpress, nigdegazoz, petito, popkekcikolatali, popkekmuzlu, pınarsu, pınarsu15l, redbull, rufflesorginal, rufflespeynirlisogan, sarileblebi, sarıkızsoda, topkek, tutku, yerfistigi, yerfistigi2 } from "@/assets/images";
 
 
 export const menu_items = [
@@ -51,7 +51,7 @@ export const menu_items = [
             {
                 id: 8,
                 name: "Niğde Gazozu",
-                price: 25,
+                price: 30,
                 img: nigdegazoz
             },
             {
@@ -71,6 +71,12 @@ export const menu_items = [
                 name: "0,5 L Su",
                 price: 10,
                 img: pınarsu
+            },
+            {
+                id: 121,
+                name: "Mandalina Soda",
+                price: 30,
+                img: mandalinasoda
             },
         ]
     },
@@ -256,7 +262,7 @@ export const menu_items = [
             {
                 id: 33,
                 name: "Tadım Kaju Fıstıgı",
-                price: 55,
+                price: 70,
                 img: kaju
             },
             {
@@ -268,7 +274,7 @@ export const menu_items = [
             {
                 id: 35,
                 name: "Tadım Badem",
-                price: 65,
+                price: 75,
                 img: badem
             },
             {
