@@ -21,13 +21,13 @@ export const menu_items = [
             {
                 id: 3,
                 name: "Coca Cola",
-                price: 40,
+                price: 50,
                 img: cocacola
             },
             {
                 id: 4,
                 name: "Fanta",
-                price: 40,
+                price: 50,
                 img: fanta
             },
             {
