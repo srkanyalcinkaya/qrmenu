@@ -9,13 +9,13 @@ export const menu_items = [
             {
                 id: 1,
                 name: "Redbull",
-                price: 50,
+                price: 60,
                 img: redbull
             },
             {
                 id: 2,
                 name: "Nescafe XPRESS",
-                price: 50,
+                price: 60,
                 img: nescafexpress
             },
             {
@@ -33,7 +33,7 @@ export const menu_items = [
             {
                 id: 5,
                 name: "Ice Tea Şeftalili",
-                price: 40,
+                price: 50,
                 img: liptonseftali
             },
             {
