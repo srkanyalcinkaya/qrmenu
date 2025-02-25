@@ -63,13 +63,13 @@ export const menu_items = [
             {
                 id: 10,
                 name: "Pınar 1,5 L Su",
-                price: 20,
+                price: 30,
                 img: pınarsu15l
             },
             {
                 id: 11,
                 name: "0,5 L Su",
-                price: 10,
+                price: 15,
                 img: pınarsu
             },
             {
