@@ -147,7 +147,7 @@ export const menu_items = [
             {
                 id: 21,
                 name: "Tutku Bisküvi",
-                price: 20,
+                price: 30,
                 img: tutku
             },
             {
@@ -177,7 +177,7 @@ export const menu_items = [
             {
                 id: 26,
                 name: "Brown Intense",
-                price: 20,
+                price: 30,
                 img: browni
             },
             {
@@ -207,19 +207,19 @@ export const menu_items = [
             {
                 id: 31,
                 name: "Nero Bisküvi ",
-                price: 20,
+                price: 30,
                 img: nero
             },
             {
                 id: 32,
                 name: "Hoşbeş Çikolatalı Gofret ",
-                price: 15,
+                price: 20,
                 img: hosbescikolatali
             },
             {
                 id: 33,
                 name: "Hoşbeş Çilekli Gofret",
-                price: 15,
+                price: 20,
                 img: hosbescilek
             },
             {
@@ -250,19 +250,19 @@ export const menu_items = [
             {
                 id: 31,
                 name: "Tadım Antep Fıstıgı",
-                price: 100,
+                price: 110,
                 img: antepfistik
             },
             {
                 id: 32,
                 name: "Tadım Fındık",
-                price: 75,
+                price: 80,
                 img: findik
             },
             {
                 id: 33,
                 name: "Tadım Kaju Fıstıgı",
-                price: 70,
+                price: 75,
                 img: kaju
             },
             {
@@ -274,7 +274,7 @@ export const menu_items = [
             {
                 id: 35,
                 name: "Tadım Badem",
-                price: 75,
+                price: 80,
                 img: badem
             },
             {
